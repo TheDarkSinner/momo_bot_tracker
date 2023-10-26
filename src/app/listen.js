@@ -31,10 +31,10 @@ async function fetchData() {
     }
 
     if (newItens.length > 0) {
-      const message = processItem(newItens);
+      const [message, url] = processItem(newItens);
       const ids = newItens.map((item) => item.id);
       console.log("Novos itens encontrados:", ids);
-      sendMessage(message);
+      sendMessage(message, url);
       newItens = [];
     }
   } catch (error) {
