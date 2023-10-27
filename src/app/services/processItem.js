@@ -327,7 +327,7 @@ const processItem = function (array) {
   const imgsList = [];
 
   for (const item of array) {
-    const { id, protoId, realPrice, attribute, quality, star, level, skill1, skill2, tx } = item;
+    let { id, protoId, realPrice, attribute, quality, star, level, skill1, skill2, tx } = item;
 
     const currentDate = moment().utc();
     const formattedDate = currentDate.format("YYYY-MM-DD HH:mm:ss [UTC]");
