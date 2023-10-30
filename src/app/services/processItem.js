@@ -355,7 +355,7 @@ const processItem = function (array) {
     const nft = `
 💸 NEW DRAGON SOLD !
 Price: ${realPrice / 1e9 / 1e9} ETH
-Attribute: ${attribute} Power
+Attribute: ${attribute} 🧬
 Quality: ${quality}
 Star: ${star}
 Level: ${level}
