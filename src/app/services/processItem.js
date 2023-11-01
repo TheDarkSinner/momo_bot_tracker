@@ -327,7 +327,7 @@ const processItem = function (array) {
   const imgsList = [];
 
   for (const item of array) {
-    let { id, protoId, realPrice, attribute, quality, star, level, skill1, skill2, tx } = item;
+    let { id, protoId, price, attribute, quality, primaryEle, star, level, skill1, skill2, tx } = item;
 
     const currentDate = moment().utc();
     const formattedDate = currentDate.format("YYYY-MM-DD HH:mm:ss [UTC]");
@@ -352,9 +352,30 @@ const processItem = function (array) {
         break;
     }
 
+    switch (primaryEle) {
+      case 1:
+        primaryEle = "🔥";
+        break;
+      case 2:
+        primaryEle = "💧";
+        break;
+      case 3:
+        primaryEle = "🍃";
+        break;
+      case 4:
+        primaryEle = "⛰️";
+        break;
+      case 5:
+        primaryEle = "🔴";
+        break;
+      case 6:
+        primaryEle = "🔴";
+        break;
+    }
+
     const nft = `
 💸 NEW DRAGON SOLD !
-Price: ${realPrice / 1e9 / 1e9} ETH
+Price: ${price / 1e9} ETH
 Attribute: ${attribute} 🧬
 Quality: ${quality}
 Star: ${star}
