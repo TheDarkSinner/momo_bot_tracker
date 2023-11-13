@@ -327,7 +327,7 @@ const processItem = function (array) {
   const imgsList = [];
 
   for (const item of array) {
-    let { id, protoId, price, attribute, quality, primaryEle, star, level, skill1, skill2, tx } = item;
+    let { id, protoId, price, attribute, quality, primaryEle, star, level, mating, skill1, skill2, tx } = item;
 
     const currentDate = moment().utc();
     const formattedDate = currentDate.format("YYYY-MM-DD HH:mm:ss [UTC]");
@@ -360,26 +360,28 @@ const processItem = function (array) {
         primaryEle = "💧";
         break;
       case 3:
-        primaryEle = "🍃";
+        primaryEle = "🍀";
         break;
       case 4:
-        primaryEle = "⛰️";
+        primaryEle = "🌋";
         break;
       case 5:
-        primaryEle = "🔴";
+        primaryEle = "🔆";
         break;
       case 6:
-        primaryEle = "🔴";
+        primaryEle = "🌑";
         break;
     }
 
     const nft = `
 💸 NEW DRAGON SOLD !
 Price: ${price / 1e9} ETH
-Attribute: ${attribute} 🧬
+Potential: ${attribute}
 Quality: ${quality}
+Element: ${primaryEle}
 Star: ${star}
 Level: ${level}
+Breed: ${mating}/7
 Date: ${formattedDate}
 
 🔎 - [Hash](https://arbiscan.io/tx/${tx})`;

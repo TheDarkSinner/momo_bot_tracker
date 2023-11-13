@@ -9,7 +9,6 @@ let bot = new TelegramBot(token, { polling: true, timeout: 60000 * 15 });
 
 bot.on("polling_error", (error) => {
   console.error("Erro no polling:", error);
-  console.log("\n", error.response.statusMessage, "\n");
 });
 
 const sendMessage = async (messages, images) => {
