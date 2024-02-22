@@ -360,27 +360,28 @@ const processItem = function (array) {
         primaryEle = "💧";
         break;
       case 3:
-        primaryEle = "🍃";
+        primaryEle = "🍀";
         break;
       case 4:
-        primaryEle = "⛰️";
+        primaryEle = "🌋";
         break;
       case 5:
-        primaryEle = "luz";
+        primaryEle = "🔆";
         break;
       case 6:
-        primaryEle = "trevas";
+        primaryEle = "🌑";
         break;
     }
 
     const nft = `
 💸 NEW DRAGON SOLD !
 Price: ${price / 1e9} ETH
-Attribute: ${attribute} 🧬
+Potential: ${attribute}
 Quality: ${quality}
-Breed Count: ${mating}
+Element: ${primaryEle}
 Star: ${star}
 Level: ${level}
+Breed: ${mating}/7
 Date: ${formattedDate}
 
 🔎 - [Hash](https://arbiscan.io/tx/${tx})`;
