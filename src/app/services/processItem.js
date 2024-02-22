@@ -327,7 +327,7 @@ const processItem = function (array) {
   const imgsList = [];
 
   for (const item of array) {
-    let { id, protoId, price, attribute, quality, primaryEle, star, level, skill1, skill2, tx } = item;
+    let { id, protoId, price, attribute, quality, primaryEle, star, level, mating, skill1, skill2, tx } = item;
 
     const currentDate = moment().utc();
     const formattedDate = currentDate.format("YYYY-MM-DD HH:mm:ss [UTC]");
@@ -354,7 +354,7 @@ const processItem = function (array) {
 
     switch (primaryEle) {
       case 1:
-        primaryEle = "🔥";
+        primaryEle = "";
         break;
       case 2:
         primaryEle = "💧";
@@ -366,10 +366,10 @@ const processItem = function (array) {
         primaryEle = "⛰️";
         break;
       case 5:
-        primaryEle = "🔴";
+        primaryEle = "luz";
         break;
       case 6:
-        primaryEle = "🔴";
+        primaryEle = "trevas";
         break;
     }
 
@@ -378,6 +378,7 @@ const processItem = function (array) {
 Price: ${price / 1e9} ETH
 Attribute: ${attribute} 🧬
 Quality: ${quality}
+Breed Count: ${mating}
 Star: ${star}
 Level: ${level}
 Date: ${formattedDate}
