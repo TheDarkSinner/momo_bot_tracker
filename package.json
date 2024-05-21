@@ -2,9 +2,9 @@
   "name": "telegram-mobox-bot",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
+  "main": "init.js",
   "scripts": {
-    "start": "node ./src/app/listen.js",
+    "start": "node init.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

@@ -1,9 +1,10 @@
-require("dotenv").config();
+const path = require("path");
+require("dotenv").config({ path: path.resolve(__dirname, "../.env") });
 
 const TelegramBot = require("node-telegram-bot-api");
 
-const token = process.env.token;
-const canalId = process.env.channelID;
+const { token } = process.env;
+const { channelID } = process.env;
 
 let bot = new TelegramBot(token, { polling: true, timeout: 60000 * 15 });
 
@@ -17,7 +18,7 @@ const sendMessage = async (messages, images) => {
     const image = images[i];
 
     bot
-      .sendPhoto(canalId, image, { caption: message, parse_mode: "Markdown" })
+      .sendPhoto(channelID, image, { caption: message, parse_mode: "Markdown" })
       .then(() => {
         console.log("Mensagem enviada com sucesso.");
       })
