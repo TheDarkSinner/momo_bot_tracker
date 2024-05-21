@@ -54,13 +54,14 @@ const processItem = function (array) {
         const nftDetails = `
   💸 NEW MOMO SOLD !
   Price: ${bidPrice / 1e9} USDT
+  Rarity: ${rarity}
   Element: ${categoryIcon}
   Level: ${level}
   Initial Hash: ${hashrate}
   Hashrate: ${lvHashrate}
   Date: ${formattedDate}
   
-  🔎 - Hash`;
+  🔎 - [Hash](https://bscscan.com/tx/${tx})`;
 
         itensList.push(nftDetails);
         imgsList.push(urls[imgKey]);

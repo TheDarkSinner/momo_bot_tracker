@@ -58,13 +58,13 @@ async function fetchData() {
   }
 }
 
-app.get("/", (req, res) => {
-  res.json(currentData);
-});
+// app.get("/", (req, res) => {
+//   res.json(currentData);
+// });
 
-app.listen(port, () => {
-  fetchData();
-  console.log(`Servidor escutando na porta ${port}`);
-});
+// app.listen(port, () => {
+//   fetchData();
+//   console.log(`Servidor escutando na porta ${port}`);
+// });
 
 module.exports = { fetchData };
